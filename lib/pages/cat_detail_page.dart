@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:tugas2/model/cat.dart';
 
 class CatDetailPage extends StatefulWidget {
@@ -55,6 +56,15 @@ class _CatDetailPageState extends State<CatDetailPage> {
                           style: TextStyle(fontWeight: FontWeight.bold)),
                       Text(':', style: TextStyle(fontWeight: FontWeight.bold)),
                       Text(widget.kucing.name),
+                    ],
+                  ),
+                  TableRow(
+                    children: [
+                      Text('Birthday',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      Text(':', style: TextStyle(fontWeight: FontWeight.bold)),
+                      
+                      Text(DateFormat('dd-MM-yyyy').format(widget.kucing.birthday)),
                     ],
                   ),
                   TableRow(

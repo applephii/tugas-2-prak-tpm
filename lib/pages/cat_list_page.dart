@@ -21,7 +21,7 @@ class _CatListPageState extends State<CatListPage> {
         padding: EdgeInsets.all(10),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 0.69,
+          childAspectRatio: 0.65,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
         ),
@@ -37,8 +37,7 @@ class _CatListPageState extends State<CatListPage> {
                     kucing: kucing,
                     onUpdate: (updatedCat) {
                       setState(() {
-                        catList[index] =
-                            updatedCat;
+                        catList[index] = updatedCat;
                       });
                     },
                   ),
@@ -62,10 +61,11 @@ class _CatListPageState extends State<CatListPage> {
                             fontSize: 18, fontWeight: FontWeight.bold)),
                   ),
                   Text('Age: ${kucing.age}', style: TextStyle(fontSize: 16)),
+                  Text('Sex: ${kucing.sex}', style: TextStyle(fontSize: 16)),
                   Text('Breed: ${kucing.breed}',
                       style: TextStyle(fontSize: 16)),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
