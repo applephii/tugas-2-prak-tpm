@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tugas2/data/cats.dart';
-// import 'package:tugas2/model/cat.dart';
 import 'package:tugas2/pages/cat_detail_page.dart';
 
 class CatListPage extends StatefulWidget {
