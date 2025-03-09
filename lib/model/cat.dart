@@ -8,6 +8,7 @@ class Cat {
   List<String> characteristics;
   String background;
   String pictureUrl;
+  bool isFavorite;
 
   Cat({
     required this.name,
@@ -19,6 +20,7 @@ class Cat {
     required this.characteristics,
     required this.background,
     required this.pictureUrl,
+    this.isFavorite = false,
   });
 
   int get age {
@@ -29,6 +31,10 @@ class Cat {
       age--;
     }
     return age;
+  }
+
+  void toggleFavorite() {
+    isFavorite = !isFavorite;
   }
 
   Map<String, dynamic> toJson() {
@@ -42,6 +48,7 @@ class Cat {
       'characteristics': characteristics,
       'background': background,
       'pictureUrl': pictureUrl,
+      'isFavorite': isFavorite,
     };
   }
 
@@ -56,6 +63,7 @@ class Cat {
       characteristics: List<String>.from(json['characteristics'] ?? []),
       background: json['background'],
       pictureUrl: json['pictureUrl'],
+      isFavorite: json['isFavorite'] ?? false,
     );
   }
 }
