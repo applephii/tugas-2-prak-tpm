@@ -1,8 +1,9 @@
 # tugas 2 praktikum TPM
 
-## list:
+### what do we do:
 
-- List Page (+ Favorite button)
+- List Page 
+- Favorite button
 - Detail Page
 
 <!-- This project is a starting point for a Flutter application.
